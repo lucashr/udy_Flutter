@@ -1,0 +1,61 @@
+Publicação nas lojas de aplicativos
+
+
+Definir o nome da aplicação
+
+android/app/src/main/androidManifest.xml
+android:label="Nome da sua Aplicação"
+
+Alterar os seguintes locais com o identificador unico da aplicação
+
+android/app/src/main/androidManifest.xml
+package = "com.example.NomeAplicacao"
+
+android/app/src/debug/androidManifest.xml 
+package = "com.example.NomeAplicacao"
+
+android/app/Build.gradle
+applicationId = "com.example.NomeAplicacao"
+
+android/app/src/main/kotlin/com/example/NomeAplicacao/MainActivity.kt
+package com.example.NomeAplicacao
+
+android/app/src/profile/androidManifest.xml
+package = "com.example.NomeAplicacao"
+
+
+
+Flutter precisa que esteja essa linha para que consiga estabelecer comunicação 
+entre ex: visual studio code e a aplicação
+
+android/app/src/debug/androidManifest.xml
+<uses-permission android:name="android.permission.INTERNET"/>
+
+
+Arquivo que sera usado na aplicação em produção
+android/app/src/main/androidManifest.xml
+
+
+Adicionando icones na aplicação
+
+Alterar o arquivo 
+Inserir os icones criados em suas respectivas pastas com o determinado tamanho
+
+Adicionando SplashScreen
+android/app/src/main/res/drawable/launch_background.xml
+
+android:src="@drawable/nomeDoIcone_icon" />
+
+
+
+Alterando as cores
+android/app/src/main/res/values/colors.xml
+
+Criar uma chave para a aplicação -> KeyTool
+Criar uma pasta chamada key.properties em:
+
+android/key.properties
+
+Obs.: Adicionar ao gitignore para nao disponibilizar em nenhum repositório
+
+

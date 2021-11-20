@@ -1,0 +1,7 @@
+para rodar o gerador de codigo do mobx
+
+
+flutter pub run build_runner build
+
+Obs.: as vezes o observavel não é reconhecido no builder. 
+Solução: rode o comando flutter packages pub run build_runner build

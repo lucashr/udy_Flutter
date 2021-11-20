@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'utils/app_routes.dart';
 
+import 'utils/custom_route.dart';
 import 'views/auth_home_screen.dart';
 import 'views/product_detail_screen.dart';
 import './views/cart_screen.dart';
@@ -51,6 +52,12 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.purple,
           accentColor: Colors.deepOrange,
           fontFamily: 'Lato',
+          pageTransitionsTheme: PageTransitionsTheme(
+            builders: {
+              TargetPlatform.android: CustomPageTransitionsBuilder(),
+              TargetPlatform.iOS: CustomPageTransitionsBuilder(),
+            },
+          ),
         ),
         routes: {
           AppRoutes.AUTH_HOME: (ctx) => AuthOrHomeScreen(),
